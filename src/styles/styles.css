@@ -10,4 +10,127 @@ body {
   font-family: "Lato", sans-serif;
   background: #1a202c;
 }
+
+nav.nav-container {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  z-index: 10;
+}
+
+nav.nav-container div.nav-list-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav.nav-container div.nav-list-wrap div.nav-element {
+  padding: 16px, 32px;
+}
+
+nav.nav-container div.nav-list-wrap div.nav-element a.nav-element-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #eeeeef;
+  font-size: 24px;
+  margin-left: 60px;
+  letter-spacing: 5px;
+}
+
+nav.nav-container div.nav-list-wrap .nav-element:active,
+nav.nav-container div.nav-list-wrap .nav-element:hover {
+  border-bottom: 8px solid #f9b934;
+}
+
+.main-container {
+  min-height: 100vh;
+  width: auto;
+  overflow: hidden;
+}
+
+.main-container button.hero-portfolio-btn {
+  position: absolute;
+  left: 15%;
+  top: 58%;
+  text-transform: uppercase;
+  color: #1a202c;
+  background: #0099ff;
+  border: none;
+  border-radius: 3px;
+  font-size: 28px;
+  padding: 15px 32px;
+}
+
+div.hero-title-container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 15%;
+  top: 35%;
+}
+
+div.hero-title-container h2.hero-text-sebastian,
+div.hero-title-container h1.hero-text-mietka {
+  text-transform: uppercase;
+  color: #eeeeef;
+  font-size: 72px;
+  line-height: 80%;
+}
+
+div.hero-title-container h2.hero-text-sebastian {
+  letter-spacing: 10px;
+}
+
+div.hero-title-container h1.hero-text-mietka {
+  font-size: 114px;
+  letter-spacing: 7px;
+}
+
+div.hero-title-container h6.hero-text-junior {
+  color: #f9b934;
+  text-transform: uppercase;
+  font-size: 23px;
+  letter-spacing: 10px;
+  padding-top: 15px;
+}
+
+div.hero-title-container div.hero-social-wrap {
+  padding-left: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: sp;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #f9b934;
+  font-size: 65px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.svg-laptop-phone {
+  position: absolute;
+  right: 10%;
+  top: 12%;
+}
+
+.svg-blob {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.svg-wave {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 /*# sourceMappingURL=styles.css.map */
