@@ -16,18 +16,19 @@ const Hero = () => {
       <Laptop />
       <Wave />
       <motion.button
-        // animate={{
-        //   // background: ["#0099ff", "#72C6FF", "#0099ff"],
-        //   y: [0, 3, 0],
-        // }}
-        // transition={{
-        //   duration: 0.5,
-        //   loop: Infinity,
-        //   type: "spring",
-        //   damping: 10,
-        //   stiffness: 100,
-        //   // ease: "easeInOut",
-        // }}
+     
+          whileHover={{
+            cursor: "pointer",
+            backgroundColor: "#f9b934",
+            y: 5,
+            
+          }}
+          transition={{
+            type: "spring",
+            duration: .7,
+            ease: "easeIn"
+            
+          }}
         className="hero-portfolio-btn"
       >
         portfolio

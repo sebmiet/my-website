@@ -1,5 +1,6 @@
 import React from "react";
 import { FaGithubSquare, FaFacebookSquare, FaLinkedin } from "react-icons/fa";
+import {motion } from "framer-motion";
 
 const HeroTitle = () => {
   return (
@@ -10,10 +11,35 @@ const HeroTitle = () => {
         <h6 className="hero-text-junior">Junior Web Developer</h6>
       </div>
       <div className="hero-social-wrap">
-        <FaGithubSquare />
-        <FaFacebookSquare />
-        <FaLinkedin />
-      </div>
+        <motion.div className="hero-social-icon"
+          whileHover={{
+            cursor: "pointer",
+            color: "#0099ff",
+          }}
+          transition={{
+            duration: .7,
+            ease: "easeIn"
+          }}
+        ><FaGithubSquare /></motion.div>       
+        <motion.div className="hero-social-icon"
+          whileHover={{
+            cursor: "pointer",
+            color: "#0099ff",
+          }}
+          transition={{
+            duration: .7,
+            ease: "easeIn"
+          }}><FaFacebookSquare /></motion.div>
+        <motion.div className="hero-social-icon"
+          whileHover={{
+            cursor: "pointer",
+            color: "#0099ff",
+          }}
+          transition={{
+            duration: .7,
+            ease: "easeIn"
+          }}><FaLinkedin /></motion.div> 
+        </div>
     </div>
   );
 };

@@ -1,22 +1,26 @@
+import { motion } from "framer-motion";
+
 const Navbar = () => {
   return (
-    <nav className="nav-container">
+    <nav>
       <div className="nav-list-wrap">
-        <div className="nav-element">
-          <a href="www.onet.pl" className="nav-element-link">
-            start
-          </a>
-        </div>
-        <div className="nav-element">
-          <a href="www.onet.pl" className="nav-element-link">
-            portfolio
-          </a>
-        </div>
-        <div className="nav-element">
-          <a href="www.onet.pl" className="nav-element-link">
-            about
-          </a>
-        </div>
+        <ul>
+          <li>
+            <div className="nav-element">
+              <a href="www.onet.pl">start</a>
+            </div>
+          </li>
+          <li>
+            <div className="nav-element">
+              <a href="www.onet.pl">portfolio</a>
+            </div>
+          </li>
+          <li>
+            <div className="nav-element">
+              <a href="www.onet.pl">about</a>
+            </div>
+          </li>
+        </ul>
       </div>
     </nav>
   );

@@ -11,6 +11,10 @@ $text-light: #eeeeef;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
+}
+html {
+  font-size: 16px;
 }
 
 body {
@@ -18,29 +22,72 @@ body {
   background: $primary-color;
 }
 
-nav.nav-container {
+nav {
   position: absolute;
+  width: 27vw;
   top: 2%;
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 10;
-  div.nav-list-wrap {
-    display: flex;
-    div.nav-element {
-      padding: 16px, 32px;
-      a.nav-element-link {
-        text-decoration: none;
-        text-transform: uppercase;
-        color: $text-light;
-        font-size: 24px;
-        margin-left: 60px;
-        letter-spacing: 5px;
-      }
-    }
-    .nav-element:active,
-    .nav-element:hover {
-      border-bottom: 8px solid $orange;
-    }
+  .nav-list-wrap {
+    width: 100%;
+    display: block;
+    float: left;
+  }
+  .nav-list-wrap ul {
+    display: block;
+    float: left;
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    text-align: center;
+  }
+  .nav-list-wrap li {
+    display: block;
+    float: left;
+    margin: 0 1rem;
+    padding: 0;
+    height: 100%;
+    transition: all ease-in-out 0.2s;
+  }
+  .nav-list-wrap a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $text-light;
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    transition: all ease-in-out 0.5s;
+  }
+  .nav-list-wrap a:hover{
+    color: $text-dark;
+    
+
+  }
+  div.nav-element {
+    border: none;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    
+  }
+  div.nav-element:hover {
+    border: none;
+  }
+  .nav-element::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 5px;
+    left: 100%;
+    bottom: 0;
+    background: $orange;
+    transition: all ease-in-out 0.3s;
+  }
+  .nav-element:hover::after {
+    width: 100%;
+    left: 0;
   }
 }
 .main-container {
@@ -55,10 +102,13 @@ nav.nav-container {
     color: $primary-color;
     background: #0099ff;
     border: none;
-    border-radius: 3px;
-    font-size: 28px;
-    padding: 15px 32px;
+    border-radius: 0.187rem;
+    font-size: 1.75rem;
+    padding: 1rem 2rem;
   }
+  // button.hero-portfolio-btn:hover {
+  //   background: $orange;
+  // }
 }
 div.hero-title-container {
   position: absolute;
@@ -69,32 +119,36 @@ div.hero-title-container {
   h1.hero-text-mietka {
     text-transform: uppercase;
     color: $text-light;
-    font-size: 72px;
+    font-size: 4.5rem;
     line-height: 80%;
   }
   h2.hero-text-sebastian {
-    letter-spacing: 10px;
+    letter-spacing: 0.625rem;
   }
   h1.hero-text-mietka {
-    font-size: 114px;
-    letter-spacing: 7px;
+    font-size: 7.125rem;
+    letter-spacing: 0.437rem;
   }
   h6.hero-text-junior {
     color: $orange;
     text-transform: uppercase;
-    font-size: 23px;
-    letter-spacing: 10px;
-    padding-top: 15px;
-    // line-height: 60px;
+    font-size: 1.4rem;
+    letter-spacing: 0.65rem;
+    padding-top: 1rem;
   }
   div.hero-social-wrap {
-    padding-left: 5px;
+    padding-left: 0.32rem;
     display: flex;
-    -ms-flex-align: sp;
-    flex-direction: column;
-    color: $orange;
-    font-size: 65px;
     justify-content: space-between;
+    flex-direction: column;
+    div.hero-social-icon {
+      color: $orange;
+      font-size: 4rem;
+      line-height: 0;
+    }
+    // div.hero-social-icon:hover {
+    //   color: $blue;
+    // }
   }
 }
 .svg-laptop-phone {
