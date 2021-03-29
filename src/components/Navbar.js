@@ -2,7 +2,15 @@ import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
-    <nav>
+    <motion.nav
+      animate={{
+        opacity: [0, 1],
+      }}
+      transition={{
+        delay: 0.5,
+        duration: 1,
+      }}
+    >
       <div className="nav-list-wrap">
         <ul>
           <li>
@@ -22,7 +30,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

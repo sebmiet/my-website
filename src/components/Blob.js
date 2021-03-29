@@ -3,7 +3,16 @@ import { motion } from "framer-motion";
 
 const Blob = () => {
   return (
-    <div className="svg-blob">
+    <motion.div
+      className="svg-blob"
+      animate={{
+        opacity: [0, 1],
+      }}
+      transition={{
+        duration: 2,
+        delay: 1,
+      }}
+    >
       <svg
         width="1377"
         height="390"
@@ -15,12 +24,11 @@ const Blob = () => {
           <motion.g
             animate={{
               scale: [1, 1.01, 1, 1.01, 1],
-              rotate: [0, 10, 30, 10,  0],
-              y: [0, -20, 0, -30, 0],
-              // borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+              rotate: [0, 10, 15, 10, 0],
+              y: [0, -20, 0, -15, 0],
             }}
             transition={{
-              duration: 10,
+              duration: 20,
               loop: Infinity,
               ease: "easeInOut",
             }}
@@ -42,7 +50,7 @@ const Blob = () => {
           </clipPath>
         </defs>
       </svg>
-    </div>
+    </motion.div>
   );
 };
 

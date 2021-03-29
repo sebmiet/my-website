@@ -8,32 +8,30 @@ import Navbar from "./Navbar";
 import Wave from "./Wave";
 
 const Hero = () => {
+  const btnAnimation = {
+    cursor: "pointer",
+    backgroundColor: "#f9b934",
+    y: -5,
+    transition: {
+      y: {
+        type: "spring",
+        stiffness: 400,
+      },
+      duration: 1,
+    },
+  };
+
   return (
-    <div className="hero-container">
+    <section className="hero-section">
       <Navbar />
       <Blob />
       <HeroTitle />
       <Laptop />
       <Wave />
-      <motion.button
-     
-          whileHover={{
-            cursor: "pointer",
-            backgroundColor: "#f9b934",
-            y: 5,
-            
-          }}
-          transition={{
-            type: "spring",
-            duration: .7,
-            ease: "easeIn"
-            
-          }}
-        className="hero-portfolio-btn"
-      >
+      <motion.button whileHover={btnAnimation} className="hero-portfolio-btn">
         portfolio
       </motion.button>
-    </div>
+    </section>
   );
 };
 

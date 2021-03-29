@@ -13,10 +13,7 @@ const Wave = () => {
       >
         <motion.g
           animate={{
-            // x: [0, -150, 0, -200, 0],
             scale: [1, 1.2, 1, 1.2, 1],
-
-            // borderRadius: ["20%", "20%", "50%", "50%", "20%"],
           }}
           transition={{
             duration: 10,

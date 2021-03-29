@@ -17,9 +17,9 @@ body {
 }
 
 nav {
-  position: absolute;
+  position: relative;
   width: 27vw;
-  top: 2%;
+  margin-top: 1%;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
@@ -83,11 +83,11 @@ nav .nav-element::after {
   position: absolute;
   width: 0px;
   height: 5px;
-  left: 100%;
+  left: 50%;
   bottom: 0;
   background: #f9b934;
-  -webkit-transition: all ease-in-out 0.3s;
-  transition: all ease-in-out 0.3s;
+  -webkit-transition: all ease-in-out 0.8s;
+  transition: all ease-in-out 0.8s;
 }
 
 nav .nav-element:hover::after {
@@ -96,7 +96,6 @@ nav .nav-element:hover::after {
 }
 
 .main-container {
-  min-height: 100vh;
   width: auto;
   overflow: hidden;
 }
@@ -112,6 +111,10 @@ nav .nav-element:hover::after {
   border-radius: 0.187rem;
   font-size: 1.75rem;
   padding: 1rem 2rem;
+}
+
+section.hero-section {
+  min-height: 100vh;
 }
 
 div.hero-title-container {
@@ -184,7 +187,97 @@ div.hero-title-container div.hero-social-wrap div.hero-social-icon {
 
 .svg-wave {
   position: absolute;
-  bottom: 0;
+  bottom: -1.5rem;
   right: 0;
+}
+
+section.portfolio-section {
+  padding: 0 12rem;
+  min-height: 100vh;
+  background: #2d3748;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #1a202c;
+  color: #eeeeef;
+  max-width: 25rem;
+  border-radius: 6px;
+  -webkit-box-shadow: 4px 4px 8px black;
+          box-shadow: 4px 4px 8px black;
+}
+
+div.card-container div.title-container {
+  padding: 2rem 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+div.card-container div.img-container {
+  width: 100%;
+  height: auto;
+}
+
+div.card-container div.img-container img {
+  width: 100%;
+  height: auto;
+}
+
+div.card-container div.desc-container {
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  text-align: justify;
+  font-size: 1.2rem;
+}
+
+div.card-container div.btns-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 2.5rem;
+}
+
+div.card-container .btn-livelink,
+div.card-container .btn-github {
+  border: none;
+  border-radius: 4px;
+  width: 9.5rem;
+  font-size: 1.5rem;
+  padding: 0.5rem 0rem;
+}
+
+div.card-container .btn-livelink {
+  background: #0099ff;
+}
+
+div.card-container .btn-github {
+  border: 2px solid #f9b934;
+  background: transparent;
+  color: #f9b934;
 }
 /*# sourceMappingURL=styles.css.map */
