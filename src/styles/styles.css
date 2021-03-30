@@ -11,6 +11,12 @@ html {
   font-size: 16px;
 }
 
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 12px;
+  }
+}
+
 body {
   font-family: "Lato", sans-serif;
   background: #1a202c;
@@ -61,10 +67,6 @@ nav .nav-list-wrap a {
   letter-spacing: 0.3rem;
   -webkit-transition: all ease-in-out 0.5s;
   transition: all ease-in-out 0.5s;
-}
-
-nav .nav-list-wrap a:hover {
-  color: #1a202c;
 }
 
 nav div.nav-element {
@@ -198,13 +200,20 @@ section.portfolio-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+  section.portfolio-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 div.card-container {
@@ -269,15 +278,27 @@ div.card-container .btn-github {
   width: 9.5rem;
   font-size: 1.5rem;
   padding: 0.5rem 0rem;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
 }
 
 div.card-container .btn-livelink {
   background: #0099ff;
 }
 
+div.card-container .btn-livelink:hover {
+  background: #f9b934;
+}
+
 div.card-container .btn-github {
   border: 2px solid #f9b934;
   background: transparent;
   color: #f9b934;
+}
+
+div.card-container .btn-github:hover {
+  border: 2px solid #0099ff;
+  color: #0099ff;
 }
 /*# sourceMappingURL=styles.css.map */

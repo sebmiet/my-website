@@ -15,6 +15,9 @@ $text-light: #eeeeef;
 }
 html {
   font-size: 16px;
+  @media only screen and (max-width: 800px) {
+    font-size: 12px;
+  }
 }
 
 body {
@@ -60,9 +63,9 @@ nav {
     letter-spacing: 0.3rem;
     transition: all ease-in-out 0.5s;
   }
-  .nav-list-wrap a:hover {
-    color: $text-dark;
-  }
+  // .nav-list-wrap a:hover {
+  //   color: $text-dark;
+  // }
   div.nav-element {
     border: none;
     position: relative;
@@ -171,9 +174,14 @@ section.portfolio-section {
   min-height: 100vh;
   background: $secondary-color;
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+}
+@media only screen and (max-width: 800px) {
+  section.portfolio-section {
+    flex-direction: column;
+  }
 }
 div.card-container {
   display: flex;
@@ -217,13 +225,22 @@ div.card-container {
     width: 9.5rem;
     font-size: 1.5rem;
     padding: 0.5rem 0rem;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
   }
   .btn-livelink {
     background: $blue;
+  }
+  .btn-livelink:hover {
+    background: $orange;
   }
   .btn-github {
     border: 2px solid $orange;
     background: transparent;
     color: $orange;
+  }
+  .btn-github:hover {
+    border: 2px solid $blue;
+    color: $blue;
   }
 }
